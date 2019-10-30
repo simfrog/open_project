@@ -1,0 +1,17 @@
+<opencv 설치>
+
+> cmd에서 Python37/Scripts경로로 들어가서 pip upgrade 및 install opencv 명령어 입력.
+>> pip.exe가 Anaconda로 설정되어있어 Python37경로에서 설치를 하여도 Anaconda에 설치됨.
+
+> uninstall을 하고 다시 설치를 하여 Anaconda에 설치된 파일들(cv2, opencv, numpy)을 복사에 Python37로 옮겼지만 무슨이유인지 되지 않음.
+>> 내 PC에서 경로설정을 다시하여 pip.exe파일을 열면 Anaconda pip가 아닌 Python37의 pip가 열리도록 설정함.
+
+> 경로설정을 다시하고 IDLE에서 cv2 라이브러리를 열려고 시도했지만 계속 cv2파일이 존재하지 않다고 에러가 뜸.
+>> 구글링을 해보니 numpy 4.몇은 Python 2.7버전과 Python 3.4이상의 버전에서 실행된다고 함.
+
+> numpy를 uninstall하고 다시 새 버전으로 설치하고 내 컴퓨터에 설치되어있는 Python버전을 확인함. 3.7버전이었음.
+>> 그래도 계속 똑같은 에러 발생.
+
+> opencv사이트에 들어가 확인해보니 프로그램의 bit가 안 맞아서 오류가 발생하는 것이라고 함.
+(numpy파일은 64bit인데 내 Python3.7은 32bit였음. 32bit가 더 호환성이 좋다고 해서 설치했던 것으로 기억함.)
+>> Python3.7 64bit버전으로 다시 깔아서 64bit IDLE에서 import를 하였더니 실행됨.
