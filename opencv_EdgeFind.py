@@ -1,4 +1,4 @@
-#gradient(이미지의 변화율)을 이용하여 엣지를 찾는 방법
+#gradient(이미지의 변화율)을 이용하여 edge를 찾는 방법
 
 import cv2
 
@@ -15,3 +15,5 @@ cv2.imshow("laplacian", laplacian)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()                                 #이미지 윈도우삭제
+
+#3가지 방법을 각각 실행시켜 보았을 때 Sobel은 edge가 잘 추출이 안되었다. Laplacian과 Canny 둘다 edge 추출이 잘 되었지만 Canny가 조금 더 잘 되어서 Canny함수를 이용하기로 결정하였다.
